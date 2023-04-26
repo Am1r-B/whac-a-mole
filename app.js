@@ -1,6 +1,11 @@
 const squares = document.querySelectorAll(".square");
 
-randomSquare();
+moveMole();
+
+function moveMole() {
+  let timerId = null;
+  timerId = setInterval(randomSquare, 500);
+}
 
 function randomSquare() {
   squares.forEach((square) => {
